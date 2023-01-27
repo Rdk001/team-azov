@@ -1,5 +1,7 @@
 @import './common';
-@import './utils/variables';
+@import './base/variables';
+@import './base/mixin';
+@import './utils/utils';
 @import './layouts/header';
 @import './layouts/hero';
 @import './layouts/offerings';
@@ -7,8 +9,6 @@
 @import './layouts/customers-say';
 @import './layouts/subscribe';
 @import './layouts/footer';
-// @import '';
-// @import '';
 // @import '';
 // @import '';
 // @import '';
