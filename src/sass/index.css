@@ -1,0 +1,18 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu-wrap {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 1280px) {
+  .menu-wrap {
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 80px;
+  }
+}/*# sourceMappingURL=index.css.map */
