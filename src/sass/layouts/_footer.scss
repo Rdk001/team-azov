@@ -9,11 +9,19 @@
 
     background-repeat: no-repeat;
     background-position: top 132px left,center bottom,right top;
-    padding: 60px 0;
+    padding: 100px 0;
   
 
     @include tablet{
         max-width: 768px;
+        background-image: url(../images/bg-footer-tab/bg-tab-1-1x.png),
+        url(../images/bg-footer-tab/bg-tab-2-1x.png),
+        url(../images/bg-footer-tab/bg-tab-3-1x.png),
+        url(../images/bg-footer-tab/bg-tab-4-1x.png),
+        url(../images/bg-footer-tab/bg-tab-5-1x.png),
+        url(../images/bg-footer-tab/bg-tab-6-1x.png),
+        url(../images/bg-footer-tab/bg-tab-orange-1x.png);
+        background-position: left -20px bottom,bottom left 130px,left 210px bottom,right 235px bottom,bottom right 100px,bottom right,top right;
     }
 
     @include desktop{
