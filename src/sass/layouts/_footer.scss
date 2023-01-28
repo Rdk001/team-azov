@@ -1,6 +1,15 @@
 .footer{
     margin: 0 auto;
     max-width: 480px;
+    background: #FEFEFE;
+    box-shadow: 0px -4px 24px rgba(105, 105, 105, 0.1);
+    background-image: url(../images/bg-footer-mob/bg-mob-apple-1x.png),
+    url(../images/bg-footer-mob/bg-mob-fruits-1x.png),
+    url(../images/bg-footer-mob/bg-mob-orange-1x.png);
+
+    background-repeat: no-repeat;
+    background-position: top 132px left,center bottom,right top;
+    padding: 60px 0;
   
 
     @include tablet{
