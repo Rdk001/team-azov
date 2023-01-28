@@ -1,0 +1,43 @@
+.header{
+padding: 10px 16px;
+display: flex;
+
+    &__nav{
+    margin-left: auto;
+    }
+
+    &__nav-list{
+     display: flex;
+     gap: 28px;
+    }
+
+    &__nav-item{
+        list-style: none;
+        // font-weight: 400;
+        // font-size: 14px;
+        // line-height: 16px;
+    }
+
+    &__nav-link{
+        text-decoration: none;
+        font-family: 'Roboto',sans-serif;
+        font-style: normal;
+
+        @include fonts(400, 14px, 16px);
+        color: $main__text__color;
+
+    }
+
+    &__button{
+        font-family: 'Roboto';
+        font-style: normal;
+
+        @include fonts(500, 13px, 20px);
+        color: $main__text__color;
+        // font-weight: 500;
+        // font-size: 13px;
+        // line-height: 20px;
+
+    }
+
+}
