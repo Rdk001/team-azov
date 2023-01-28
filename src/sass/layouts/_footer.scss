@@ -9,7 +9,7 @@
 
     background-repeat: no-repeat;
     background-position: top 132px left,center bottom,right top;
-    padding: 100px 0;
+    padding: 120px 0;
   
 
     @include tablet{
@@ -26,6 +26,15 @@
 
     @include desktop{
     max-width: 1280px;
+    background-image: url(../images/bg-footer-desk/bg-desk-1-1x.png),
+        url(../images/bg-footer-desk/bg-desk-2-1x.png),
+        url(../images/bg-footer-desk/bg-desk-5-1x.png),
+        url(../images/bg-footer-desk/bg-desk-4-1x.png),
+        url(../images/bg-footer-desk/bg-desk-3-1x.png),
+        url(../images/bg-footer-desk/bg-desk-6-1x.png),
+        url(../images/bg-footer-desk/bg-desk-7-1x.png),
+        url(../images/bg-footer-desk/bg-desk-8-1x.png);
+        background-position: left 53px bottom,bottom left 215px,center bottom,center bottom,bottom left 300px,bottom right 270px,bottom right 130px,bottom right 16px;
    }
 }
 
