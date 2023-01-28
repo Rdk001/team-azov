@@ -1,0 +1,51 @@
+body {
+  background: $white__main__color;
+  color: $main__text__color;
+  font-family: $main__font;
+}
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  @include mobile {
+    width: 480px;
+  }
+  @include tablet {
+    padding-left: 32px;
+    padding-right: 32px;
+    width: 768px;
+  }
+  @include desktop {
+    padding-left: 16px;
+    padding-right: 16px;
+    width: 1280px;
+  }
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
