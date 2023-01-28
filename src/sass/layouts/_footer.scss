@@ -107,16 +107,27 @@ gap: 20px;
         color: #505050;
     }
 
-    &:not(:placeholder-shown):valid{
+    &:not(:placeholder-shown):not(:focus):valid{
         border-color: $accent__text__color;
     }
     
-    &:not(:placeholder-shown):invalid{
+    &:not(:placeholder-shown):not(:focus):invalid{
         border-color:#FF705D;
     }
 
     @include tablet{
         width: 279px;
+    }
+}
+
+.error{
+    display: none;
+    @include fonts(400,10px,1.5);
+    color: #FF705D;
+
+    .form__input:not(:placeholder-shown):not(:focus):invalid + &{
+        display: block;
+        margin-top: 4px;
     }
 }
 
