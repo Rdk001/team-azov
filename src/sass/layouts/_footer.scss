@@ -6,10 +6,15 @@
     background-image: url(../images/bg-footer-mob/bg-mob-apple-1x.png),
     url(../images/bg-footer-mob/bg-mob-fruits-1x.png),
     url(../images/bg-footer-mob/bg-mob-orange-1x.png);
-
     background-repeat: no-repeat;
     background-position: top 132px left,center bottom,right top;
-    padding: 120px 0;
+    padding: 60px 0;
+    @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url(../images/bg-footer-mob/bg-mob-apple-2x.png),
+        url(../images/bg-footer-mob/bg-mob-fruits-2x.png),
+        url(../images/bg-footer-mob/bg-mob-orange-2x.png);
+        background-size: 35%,75%,35%;
+    }
   
 
     @include tablet{
@@ -22,7 +27,20 @@
         url(../images/bg-footer-tab/bg-tab-6-1x.png),
         url(../images/bg-footer-tab/bg-tab-orange-1x.png);
         background-position: left -20px bottom,bottom left 130px,left 210px bottom,right 235px bottom,bottom right 100px,bottom right,top right;
+       
+        @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+            background-image: url(../images/bg-footer-tab/bg-tab-1-2x.png),
+            url(../images/bg-footer-tab/bg-tab-2-2x.png),
+            url(../images/bg-footer-tab/bg-tab-3-2x.png),
+            url(../images/bg-footer-tab/bg-tab-4-2x.png),
+            url(../images/bg-footer-tab/bg-tab-5-2x.png),
+            url(../images/bg-footer-tab/bg-tab-6-2x.png),
+            url(../images/bg-footer-tab/bg-tab-orange-2x.png);
+            background-size: 23%,21%,23%,28%,23%,20%,25%;
+
+        }
     }
+
 
     @include desktop{
     max-width: 1280px;
@@ -35,7 +53,19 @@
         url(../images/bg-footer-desk/bg-desk-7-1x.png),
         url(../images/bg-footer-desk/bg-desk-8-1x.png);
         background-position: left 53px bottom,bottom left 215px,center bottom,center bottom,bottom left 300px,bottom right 270px,bottom right 130px,bottom right 16px;
-   }
+   
+        @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+            background-image: url(../images/bg-footer-desk/bg-desk-1-2x.png),
+            url(../images/bg-footer-desk/bg-desk-2-2x.png),
+            url(../images/bg-footer-desk/bg-desk-5-2x.png),
+            url(../images/bg-footer-desk/bg-desk-4-2x.png),
+            url(../images/bg-footer-desk/bg-desk-3-2x.png),
+            url(../images/bg-footer-desk/bg-desk-6-2x.png),
+            url(../images/bg-footer-desk/bg-desk-7-2x.png),
+            url(../images/bg-footer-desk/bg-desk-8-2x.png);
+            background-size: 15%,15%,30%,30%,16%,20%,15%,15%;
+        }
+    }
 }
 
 
