@@ -1,9 +1,3 @@
-.list{
-margin: 0;
-padding: 0;
-list-style: none;
-}
-
 .footer{
     margin: 0 auto;
     padding-top: 60px;
@@ -21,8 +15,8 @@ list-style: none;
     @include desktop{
     max-width: 1280px;
     background-color: #505050;
-    padding-left: 120px;
-    padding-right: 120px;
+    padding-top: 120px;
+    padding-bottom: 120px;
     }
 }
 
@@ -65,10 +59,9 @@ flex-grow: 1;
 gap: 20px;
 
 &__link{
-    @include fonts(400,14px,1.14,null);
-
+    @include fonts(400,14px,1.14);
+    color: currentColor;
     text-decoration: none;
-    color: $main__text__color;
     }
 
 
@@ -84,11 +77,10 @@ gap: 20px;
 }
 
 .form-title{
-    @include fonts(500,14px,1.5,null);
+    @include fonts(500,14px,1.5);
     
     display: block;
     margin-bottom: 12px;
-    color:$main__text__color ;
 }
 
 .form{
@@ -106,12 +98,12 @@ gap: 20px;
     padding: 12px;
 
     outline: transparent;
-    background-color:#FEFEFE;;
-    border: 1px solid #FFE550;
+    background-color:$white__secondary__color;
+    border: 1px solid $yellow__bg__color;
     border-radius: 30px;
 
     &::placeholder{
-        @include fonts(400,12px,1.5,null);
+        @include fonts(400,12px,1.5);
         color: #505050;
     }
 
@@ -133,26 +125,30 @@ gap: 20px;
     min-width: 103px;
     height: 42px;
     
-    @include fonts(500,13px,1.5,null);
-    color: #2C2C2C;
+    @include fonts(500,13px,1.5);
+    color: currentColor;
     
     background: #FFFFFF;
     border: 1px solid $accent__text__color;
     border-radius: 30px;
 
+    
     @include tablet_max {
         margin-left: auto;
         margin-top: 20px;
         margin-bottom: 20px;
     }
+    
+    &:hover,&:focus{
+        border-color:#FFE450;
+    }
 }
 
 .form-text{
-    @include fonts(400,10px,1.2,null);
-    color: $main__text__color;
+    @include fonts(400,10px,1.2);
     
     @include tablet{
-        @include fonts(400,12px,1.17,null);
+        @include fonts(400,12px,1.17);
     }
 
     @media screen and (max-width:1279px) {
@@ -186,12 +182,12 @@ gap: 20px;
     }
 
     &__link{
-        @include fonts(400,10px,1.2,null);
+        @include fonts(400,10px,1.2);
         text-decoration: underline;
         color: $accent__text__color;
 
         @include tablet{
-            @include fonts(400,12px,1.17,null);
+            @include fonts(400,12px,1.17);
         }
     }
 
@@ -202,14 +198,13 @@ gap: 20px;
 }
 
 .copy-text{
-    @include fonts(400,10px,1.2,null);
-    margin: 0;
+    @include fonts(400,10px,1.2);
 
     @include tablet_max{
     text-align: center;
     }
 
     @include tablet{
-    @include fonts(400,12px,1.17,null);
+    @include fonts(400,12px,1.17);
     }
 }
