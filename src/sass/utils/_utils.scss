@@ -8,18 +8,22 @@ body {
   padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
+  background-color: red;
   @include mobile {
     width: 480px;
+    background-color: green;
   }
   @include tablet {
     padding-left: 32px;
     padding-right: 32px;
     width: 768px;
+    background-color: greenyellow;
   }
   @include desktop {
     padding-left: 16px;
     padding-right: 16px;
     width: 1280px;
+    background-color: orangered;
   }
 }
 
