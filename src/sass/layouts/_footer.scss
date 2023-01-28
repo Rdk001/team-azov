@@ -1,0 +1,228 @@
+.footer{
+    margin: 0 auto;
+    max-width: 480px;
+  
+
+    @include tablet{
+        max-width: 768px;
+    }
+
+    @include desktop{
+    max-width: 1280px;
+   }
+}
+
+
+.menu-wrap-footer{
+display: flex;
+flex-direction: column;
+
+@include desktop{
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 80px;
+}
+}
+
+.navigation-footer{
+    display: flex;
+    
+    @media screen and (max-width:1279px) {
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+} 
+
+.logo-footer{
+@include tablet{
+    margin-right: 114px;
+}
+
+@include desktop{
+    margin-right: 148px;
+}
+
+}
+
+.menu-footer{
+display: flex;
+flex-direction: column;
+align-items: center;
+flex-grow: 1;
+row-gap: 20px;
+
+&__link{
+    @include fonts(400,14px,1.14);
+    color: currentColor;
+    text-decoration: none;
+    }
+
+
+@include tablet{
+    flex-direction: row;
+    column-gap: 28px;
+}
+}
+
+.form-wrap{
+@include desktop{
+    margin-left: auto;
+}
+}
+
+.form-title{
+    @include fonts(500,14px,1.5);
+    
+    display: block;
+    margin-bottom: 12px;
+}
+
+.form{
+@include tablet{
+    display: flex;
+    gap: 13px;
+    margin-bottom: 12px;
+}
+
+&__label{
+position: relative;
+}
+}
+
+
+.form__input{
+    font-family: inherit;
+    height: 42px;
+    width: 100%;
+    padding: 12px;
+
+    outline: transparent;
+    background-color:$white__secondary__color;
+    border: 1px solid $yellow__bg__color;
+    border-radius: 30px;
+
+    &::placeholder{
+        @include fonts(400,12px,1.5);
+        color: #505050;
+    }
+
+    &:not(:placeholder-shown):not(:focus):valid{
+        border-color: $accent__text__color;
+    }
+    
+    &:not(:placeholder-shown):not(:focus):invalid{
+        border-color:#FF705D;
+    }
+
+    @include tablet{
+        width: 279px;
+    }
+}
+
+.error{
+    display: none;
+    @include fonts(400,10px,1.5);
+    color: #FF705D;
+
+    .form__input:not(:placeholder-shown):not(:focus):invalid + &{
+        display: block;
+        position: absolute;
+        bottom: -50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+}
+
+.form__button{
+    display: block;
+    min-width: 103px;
+    height: 42px;
+    cursor: pointer;
+    
+    @include fonts(500,13px,1.5);
+    color: currentColor;
+    
+    background: #FFFFFF;
+    border: 1px solid $accent__text__color;
+    border-radius: 30px;
+
+    
+    @include tablet_max {
+        margin-left: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    @include desktop{
+    @include animation(border-color);
+    }
+    
+    &:hover,&:focus{
+        border-color:#FFE450;
+    }
+}
+
+.form-text{
+    @include fonts(400,10px,1.2);
+    
+    @include tablet{
+        @include fonts(400,12px,1.17);
+    }
+
+    @media screen and (max-width:1279px) {
+        margin-bottom: 60px;
+    }
+}
+
+.form-text-second{
+    text-decoration-line: underline;
+    color: $accent__text__color;
+}
+
+.info-wrap{
+    display: flex;
+
+    @include tablet_max{
+    flex-direction: column;
+    }
+
+    @include tablet{
+    align-items: center;
+    }
+}
+
+.info{
+    display: flex;
+
+    @include tablet_max{
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+
+    &__link{
+        @include fonts(400,10px,1.2);
+        text-decoration: underline;
+        color: $accent__text__color;
+
+        @include tablet{
+            @include fonts(400,12px,1.17);
+        }
+    }
+
+    @include tablet{
+    gap: 20px;
+    flex-grow: 1;
+    }
+}
+
+.copy-text{
+    @include fonts(400,10px,1.2);
+
+    @include tablet_max{
+    text-align: center;
+    }
+
+    @include tablet{
+    @include fonts(400,12px,1.17);
+    }
+}
