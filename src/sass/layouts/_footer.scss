@@ -181,7 +181,8 @@ position: relative;
 
     .form__input:not(:placeholder-shown):not(:focus):invalid + &{
         display: block;
-        margin-top: 4px;
+        position: absolute;
+        left: 0;
     }
 }
 
