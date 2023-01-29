@@ -2,7 +2,7 @@
 .Favorites {
     padding-top: 60px;
     padding-bottom: 60px;
-    @media screen and (min-width: 768px) {
+    @include tablet {
       padding-top: 100px;
       padding-bottom: 100px;
     }
@@ -16,13 +16,11 @@
   
   
   .Favorites__titel {
-    font-weight: 700;
-    font-size: 28px;
-    line-height: calc(32 / 28);
+    @include fonts(700, 28px, calc(32 / 28));
     text-align: center;
     margin-bottom: 20px;
     color: #2c2c2c;
-    @media screen and (min-width:768px) {
+    @include tablet {
       font-weight: 700;
       font-size: 42px;
       line-height: calc(49 / 42);
@@ -30,16 +28,13 @@
   }
   
   .Favorites__text {
-    font-size: 14px;
-    line-height: calc(16 / 14);
-    text-align: center;
+    @include fonts(null, 14px, calc(16 / 14));
     margin-bottom: 60px;
     color: #2c2c2c;
-    @media screen and (min-width: 768px) {
-    font-size: 16px;
-  line-height: 19px;
+    @include tablet {
+        @include fonts(null, 16px, calc(19 / 16));
   }
-    @media screen and (min-width: 1280px) {
+    @include desktop {
       margin-bottom: 40px;
     }
   }
@@ -52,7 +47,7 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
-    @media screen and (min-width: 768px) {
+    @include tablet {
       gap: 32px;
       flex-direction: row;
       flex-wrap: wrap;
@@ -68,19 +63,19 @@
     padding: 17px;
     border: 11px solid #ffe550;
     border-radius: 50%;
-    @media screen and (min-width: 768px) {
+    @include tablet {
       width: calc((100% - 32px) / 2);
       border: 14px solid #ffe550;
       padding: 21px;
     }
-    @media screen and (min-width: 1280px) {
+    @include desktop {
       padding: 24px;
       width: calc((100% - 64px) / 3);
       border: 16px solid #ffe550;
     }
     &:nth-last-child(-n + 3) {
       display: none;
-      @media screen and (min-width: 768px) {
+      @include tablet {
         display: block;
       }
     }
