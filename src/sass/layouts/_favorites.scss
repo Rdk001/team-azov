@@ -29,6 +29,7 @@
   
   .Favorites__text {
     @include fonts(null, 14px, calc(16 / 14));
+    text-align:  center;
     margin-bottom: 60px;
     color: #2c2c2c;
     @include tablet {
