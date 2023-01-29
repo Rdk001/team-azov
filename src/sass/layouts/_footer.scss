@@ -181,10 +181,7 @@ position: relative;
 
     .form__input:not(:placeholder-shown):not(:focus):invalid + &{
         display: block;
-        position: absolute;
-        bottom: -50%;
-        left: 0;
-        transform: translateY(-50%);
+        margin-top: 4px;
     }
 }
 
