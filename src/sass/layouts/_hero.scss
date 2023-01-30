@@ -1,49 +1,71 @@
-.hero {
-padding-top: 60px;
-padding-bottom: 50px;
-background-color: $white__color;
+.container {
+    @include tablet {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
 
+.hero {
+    padding-top: 60px;
+    padding-bottom: 50px;
+    background-color: $white__color;
+
+    @include desktop {
+        height: 608px;
+    }
 }
 
 .hero_title {
     @include fonts (700, 28px, calc(33 / 28));
-    
+
     margin-left: auto;
     margin-right: auto;
-    
     margin-bottom: 28px;
     color: $main__text__color;
 
-    
-
     @include tablet {
-    width: 537px;
-    text-align: left;
-    font-weight: 700;
-    font-size: 42px;
-    line-height: calc(50 / 42);
-    margin-bottom: 44px;
-    margin-left: 0;
+        width: 537px;
+        text-align: left;
+        font-weight: 700;
+        font-size: 42px;
+        line-height: calc(50 / 42);
+        margin-bottom: 44px;
+        margin-left: 0;
+    }
+
+    @include desktop {
+        @include fonts (700, 48px, calc(58 / 48));
+        width: 502px;
+        margin-bottom: 28px;
+        margin-top: 100px;
     }
 }
 
 .hero__text {
     @include fonts (null, 14px, calc(21 / 14));
-    
+
     margin-bottom: 28px;
     color: $main__text__color;
     margin-left: auto;
     margin-right: auto;
 
     @include tablet {
-    @include fonts (null, 16px, calc(24 / 16));
-    text-align: left;
-    width: 336px;
-    height: 120px;
-    margin-bottom: 40px;
-    margin-left: 0;
-    margin-right: 32px;
+        @include fonts (null, 16px, calc(24 / 16));
+        text-align: left;
+        width: 336px;
+        height: 120px;
+        margin-bottom: 40px;
+        margin-left: 0;
+        margin-right: 32px;
     }
+
+    @include desktop {
+        @include fonts (null, 16px, calc(24 / 16));
+        width: 502px;
+        height: 69px;
+        margin-bottom: 40px;
+    }
+
 }
 
 .hero__button {
@@ -60,43 +82,46 @@ background-color: $white__color;
     margin-left: auto;
     margin-right: auto;
 
- 
-    
 }
-
 
 .hero__photo {
-display: none;
+    display: none;
 
-@include tablet {
-display: block;
-width: 336px;
-height: 320px;
-position: absolute;
-left: 50%;
-top: 30%;
-z-index: 1;
+    @include tablet {
+        display: block;
+        width: 332px;
+        position: absolute;
+        left: 55%;
+        top: 20%;
+        z-index: 1;
+    }
 
-}
+    @include desktop {
+        width: 580px;
+        position: absolute;
+        left: 63%;
+        top: -10%;
+        z-index: 1;
+    }
 }
 
 .hero__wrap {
- @include tablet {
-    display: flex;
-    position: relative;
- }   
+    @include tablet {
+        display: flex;
+        position: relative;
+    }
 }
-
-// .hero__hero {
-//     @include tablet {
-//         display: flex;
-//     }
-// }
 
 .hero__image {
     @include tablet {
         width: 292px;
-        border: 14px solid #FFE550;
+        border: 14px solid $yellow__bg__color;
+        border-radius: 50%;
+    }
+
+    @include desktop {
+        width: 528px;
+        border: 26px solid $yellow__bg__color;
         border-radius: 50%;
     }
 }
