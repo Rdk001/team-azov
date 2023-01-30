@@ -1,18 +1,54 @@
 .subscribe {
     background: $white__main__color;
+    // padding-bottom: 62px;
+    // padding-top: 52px;
+
+    // @include tablet {
+    //     // padding-bottom: 100px;
+    //     // padding-top: 82px;
+    // }
+
+    @include desktop {
+        height: 266px;
+        position: relative;
+        max-width: 1280px;
+    } 
+}
+.subscribe__box {
+    background: $white__main__color;
     padding-bottom: 62px;
     padding-top: 52px;
     position: relative;
-
     @include tablet {
         padding-bottom: 100px;
         padding-top: 82px;
     }
-
     @include desktop {
         display: flex;
+        position: absolute;
+        bottom: 46px;
         flex-direction: row-reverse;
-    } 
+        flex-wrap: nowrap;
+        padding-top: 0;
+        padding-bottom: 64px;
+        //justify-content: baseline;
+        //padding-bottom: 64px;
+        //padding-top: 46px;
+        //flex:1;
+        
+    }
+}
+.subscribe__wrap-form {
+    // @include desktop {
+    // height: 266px;
+    // width: 656px;
+    // }
+}
+.subscribe__wrap {
+    // @include desktop {
+    //     width: 608px;
+    //     height: 266px;
+    // }
 }
 .subscribe__title {
     @include fonts(700, 28px, 1.20);
@@ -20,6 +56,9 @@
 
     @include tablet {
         font-size: 42px;
+    }
+    @include desktop {
+        padding-top: 46px;
     }
 }
 .subscribe__desc {
@@ -43,6 +82,7 @@
     }
     @include desktop {
         gap: 32px;
+        margin-bottom: 36px;
     }
 }
 
@@ -115,27 +155,30 @@
         border: 0.854167px solid #FFE450;
     }
 }
-
 .subscribe__img {
     position: absolute;
+    display: block;
     top: -43px;
     left: 50%;
     transform: translateX(-50%);
     width: 280px;
 
     @include tablet {
-            top: -74px;
-            right: 0;
-            left: 100%;
-            transform: translateX(-100%);
-            // width: 281px;
-            // height: 136px;
-        }
+        top: -74px;
+        right: 0;
+        left: 93%;
+        transform: translateX(-93%);
+        //width: 281px;
+        // height: 136px;
+    }
 
     @include desktop {
         position: static;
-        // width: 608px;
-        // height: 266px;
+        transform: none;
+        //display: inline-block;
+        width: 608px;
+        height: 266px;
+        //object-fit: contain;
     }
 
 }
