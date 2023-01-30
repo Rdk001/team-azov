@@ -4,25 +4,46 @@
     padding-top: 52px;
     position: relative;
 
-  
+    @include tablet {
+        padding-bottom: 100px;
+        padding-top: 82px;
+    }
+
+    @include desktop {
+        display: flex;
+        flex-direction: row-reverse;
+    } 
 }
 .subscribe__title {
     @include fonts(700, 28px, 1.20);
     margin-bottom: 20px;
 
+    @include tablet {
+        font-size: 42px;
+    }
 }
-
 .subscribe__desc {
     @include fonts(400, 14px, 1.14);
     margin-bottom: 40px;
 
+    @include tablet {
+        @include fonts(null, 16px, 1.50);
+        margin-bottom: 24px;
+    }
 }
-
 .subscribe__form {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 
+    @include tablet {
+        flex-direction: row;
+        align-items: baseline;
+        gap: 22px;
+    }
+    @include desktop {
+        gap: 32px;
+    }
 }
 
 .subscribe__input {
@@ -55,11 +76,15 @@
         border: 0.854167px solid #FF705D;
     }
     &:not(:placeholder-shown):not(:focus):invalid+.subscribe__error {
-            display: block;
-            position: absolute;
-            left: 4%;
-            bottom: 32%;
-        }
+        display: block;
+        position: absolute;
+        left: 4%;
+        bottom: 32%;
+    }
+    @include tablet {
+        width: 395px;
+        margin-bottom: 0;
+    }
 }
 .subscribe__error {
     display: none;
@@ -97,5 +122,20 @@
     left: 50%;
     transform: translateX(-50%);
     width: 280px;
+
+    @include tablet {
+            top: -74px;
+            right: 0;
+            left: 100%;
+            transform: translateX(-100%);
+            // width: 281px;
+            // height: 136px;
+        }
+
+    @include desktop {
+        position: static;
+        // width: 608px;
+        // height: 266px;
+    }
 
 }
