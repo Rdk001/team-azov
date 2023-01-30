@@ -1,0 +1,51 @@
+<div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+      <button type="button" class="modal-close" data-modal-close>X</button>
+      <p class="modal-title">Order Form</p>
+      <form class="modal-form">
+        <div class="modal-field">
+          <label for="user-name" class="input-text">Name</label>
+          <div class="input-wrap">
+            <input
+              type="text"
+              class="modal-input"
+              name="user-name"
+              required
+              id="user-name"
+              placeholder="Enter a name"
+              minlength="2"
+              maxlength="25"
+            />
+          </div>
+        </div>
+        <div class="modal-field">
+          <label for="user-tel" class="input-text">Phone number</label>
+          <div class="input-wrap">
+            <input
+              type="tel"
+              class="modal-input"
+              name="user-tel"
+              required
+              id="user-tel"
+              placeholder="Enter your phone number"
+              minlength="10"
+            />
+          </div>
+        </div>
+        <div class="modal-field">
+          <label for="user-mail" class="input-text">E-mail</label>
+          <div class="input-wrap">
+            <input
+              type="email"
+              class="modal-input"
+              name="user-mail"
+              required
+              id="user-mail"
+              placeholder="Enter your e-mail"
+            />
+          </div>
+        </div>
+        <button type="submit" class="modal-button">Send</button>
+      </form>
+    </div>
+  </div>
