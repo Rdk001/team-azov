@@ -56,6 +56,16 @@
       fill:$accent__text__color;
     }
   }
+  .modal-close::before{
+    content:'';
+    background-image:url(../images/icon-cross.svg);
+    position: absolute;
+    fill:$main__text__color;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 
   .button-icon {
     fill:$main__text__color;
@@ -109,8 +119,7 @@
 
   .modal-button{
   @include fonts(700, 16px, calc(30 / 16));
-  
-  color:var(--primary-white-color);
+  position: relative;
   background-color:$white__color;
   border:2px solid rgba(0, 0, 0, 0.2);
   border-radius: 30px;
