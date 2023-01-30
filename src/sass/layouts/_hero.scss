@@ -7,7 +7,7 @@ background-color: $white__color;
 
 .hero_title {
     @include fonts (700, 28px, calc(33 / 28));
-    width: 280px;
+    
     margin-left: auto;
     margin-right: auto;
     
@@ -70,14 +70,20 @@ display: none;
 
 @include tablet {
 display: block;
-border: 14px solid #FFE550;
-border-radius:  148.414px;;
+width: 336px;
+height: 320px;
+position: absolute;
+left: 50%;
+top: 30%;
+z-index: 1;
+
 }
 }
 
 .hero__wrap {
  @include tablet {
     display: flex;
+    position: relative;
  }   
 }
 
@@ -90,5 +96,7 @@ border-radius:  148.414px;;
 .hero__image {
     @include tablet {
         width: 292px;
+        border: 14px solid #FFE550;
+        border-radius: 50%;
     }
 }
