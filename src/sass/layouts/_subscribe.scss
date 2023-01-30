@@ -1,0 +1,101 @@
+.subscribe {
+    background: $white__main__color;
+    padding-bottom: 62px;
+    padding-top: 52px;
+    position: relative;
+
+  
+}
+.subscribe__title {
+    @include fonts(700, 28px, 1.20);
+    margin-bottom: 20px;
+
+}
+
+.subscribe__desc {
+    @include fonts(400, 14px, 1.14);
+    margin-bottom: 40px;
+
+}
+
+.subscribe__form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+}
+
+.subscribe__input {
+    box-sizing: border-box;
+    background: $white__color;
+    border: 0.854167px solid $yellow__bg__color;
+    @include animation(border);
+    @include animation(outline);
+    border-radius: 30px;
+    padding: 12px 11px;
+    margin-bottom: 20px;
+    width: 100%;
+    position: relative;
+
+    &::placeholder {
+        font-family: $main__font;
+        @include fonts(400, 12px, 1.50);
+        color: #505050;
+    }
+
+    &:focus {
+        outline: transparent;
+    }
+
+    &:not(:placeholder-shown):not(:focus):valid {
+        border: 0.854167px solid $accent__text__color;
+    }
+
+    &:not(:placeholder-shown):not(:focus):invalid {
+        border: 0.854167px solid #FF705D;
+    }
+    &:not(:placeholder-shown):not(:focus):invalid+.subscribe__error {
+            display: block;
+            position: absolute;
+            left: 4%;
+            bottom: 32%;
+        }
+}
+.subscribe__error {
+    display: none;
+    @include fonts(400, 10px, 1.5);
+    color: #FF705D;
+}
+
+.subscribe__btn {
+    display: block;
+    @include fonts(500, 13px, 1.50);
+
+    color: $main__text__color;
+    background: $btn__green__color;
+    border-radius: 30px;
+    border: 0.854167px solid $btn__green__color;
+    @include animation(background);
+    @include animation(border);
+    cursor: pointer;
+
+    padding: 11px 22px;
+    width: 103px;
+    float: right;
+
+
+    &:focus,
+    &:hover {
+        background: #FFE450;
+        border: 0.854167px solid #FFE450;
+    }
+}
+
+.subscribe__img {
+    position: absolute;
+    top: -43px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 280px;
+
+}

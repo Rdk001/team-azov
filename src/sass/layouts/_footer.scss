@@ -108,8 +108,12 @@ row-gap: 20px;
 
 &__link{
     @include fonts(400,14px,1.14);
-    color: currentColor;
+    color: $secondary__text__color;
     text-decoration: none;
+
+    @include desktop{
+    color:$main__text__color;
+    }
     }
 
 
