@@ -1,0 +1,42 @@
+<section class="subscribe">
+  <div class="subscribe__wrap">
+    <picture class="subscribe__img">
+      <source
+        srcset="./images/banana-desk-1x.png 1x, ./images/banana-desk-2x.png 2x"
+        media="(min-width: 1280px)"
+      />
+      <source
+        srcset="./images/banana-tab-1x.png 1x, ./images/banana-tab-2x.png 2x"
+        media="(min-width: 768px)"
+      />
+      <source
+        srcset="./images/banana-mob-1x.png 1x, ./images/banana-mob-2x.png 2x"
+        media="(max-width: 767px)"
+      />
+      <img
+        src="./images/banana-mob-1x.png"
+        alt="Картинка банану"
+        width="280"
+        class="img"
+        height="78"
+      />
+    </picture>
+  </div>
+  <div class="subscribe__wrap-form">
+    <h2 class="subscribe__title">Subscribe To Get Special Offers</h2>
+    <p class="subscribe__desc">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+      varius enim in eros elementum tristique.
+    </p>
+    <form class="subscribe__form">
+      <input
+        type="email"
+        id="sub-email"
+        class="subscribe__input subscribe__item"
+        name="subscribe-email"
+        placeholder="Enter your email"
+      />
+      <button type="submit" class="subscribe__btn">Subscribe</button>
+    </form>
+  </div>
+</section>
