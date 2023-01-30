@@ -77,10 +77,21 @@
         border: none;
         background-color: transparent;
         margin-left: auto;
+        
 
         @include tablet{
          display: none;
         }
+      }
+
+      &__burger-icon{
+        @include animation(fill);
+
+        &:hover,
+        &:focus{
+            fill: $btn__green__color;
+        }
+
       }
   
       &__button{
