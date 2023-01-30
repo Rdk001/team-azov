@@ -1,25 +1,24 @@
 .customers-say{
-
+    position: relative;
     &__container{
         padding-top: 60px;
         padding-bottom: 60px;
         background-repeat: no-repeat;
         background-size: cover;
-        min-height: 769px;
         @include mobile_max{
             background-image: url(../images/bg-custom/bg-cust-320-1x-min.png);
         }
         @include mobile{
             background-image: url(../images/bg-custom/bg-cust-480-1x-min.png);
+            min-height: 769px;
         }
         @include tablet{
             padding: 60px 32px 120px 32px;
-            min-height: 544px;
             background-image: url(../images/bg-custom/bg-cust-tab-1x-min.png);
+            min-height: 554px;
         }
         @include desktop{
             padding: 100px 123px 200px 16px;
-            min-height: 647px;
             background-image: url(../images/bg-custom/bg-cust-desk-1x-min.png);
         }
     }
