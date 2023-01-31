@@ -1,44 +1,106 @@
 <section class="offerings-main" id="about">
-  <div class="container">
-    <img
-      src="./images/apple-mob-1x.png"
-      alt="apple"
-      width="280px"
-      class="offerings__img"
-    />
+  <div class="container offering-container">
+    <div class="offerings-img-cards">
+      <div class="offerings-card">
+        <picture>
+          <source
+            srcset="
+              ./images/apple-desk-1x.png 1x,
+              ./images/apple-desk-2x.png 2x
+            "
+            media="(min-width: 1280px)"
+          />
+          <source
+            srcset="./images/apple-tab-1x.png 1x, ./images/apple-tab-2x.png 2x"
+            media="(min-width: 768px)"
+          />
+          <source
+            srcset="./images/apple-mob-1x.png 1x, ./images/apple-mob-2x.png 2x"
+            media="(min-width: 320px)"
+          />
+          <div class="offerings--img-pos">
+            <div class="offerings--border">
+              <div class="offerings--bg-img">
+                <img
+                  src="./images/apple-mob-1x.png"
+                  alt="apple"
+                  width="auto"
+                  class="offerings__img"
+                />
+              </div>
+            </div>
+          </div>
+        </picture>
+      </div>
+      <div class="offerings-apples">
+        <picture>
+          <source
+            srcset="
+              ./images/apple-tab-2-1x.png 1x,
+              ./images/apple-tab-2-2x.png 2x
+            "
+            media="(min-width: 768px)"
+          />
+          <img
+            src="/src/images/apple-tab-2-1x.png"
+            alt="apple"
+            width="auto"
+            class="apple-tablet"
+          />
+        </picture>
+        <picture>
+          <source
+            srcset="
+              ./images/apple-tab-3-1x.png 1x,
+              ./images/apple-tab-3-2x.png 2x
+            "
+            media="(min-width: 768px)"
+          />
+          <img
+            src="/src/images/apple-tab-3-1x.png"
+            alt="apple"
+            width="auto"
+            class="apple-tablet-last"
+          />
+        </picture>
+      </div>
+    </div>
+
+   <div class="offerings-body">
     <div class="offerings-center">
-      <h3 class="offerings-name">What’s Special About Our Offerings</h3>
-      <p class="offerings-text">
+      <h2 class="offerings-name">What’s Special About Our Offerings</h2>
+      <p class="offerings-text-own">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
         varius enim in eros elementum tristique. Duis cursus, mi quis viverra
         ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
       </p>
     </div>
-    <ul class="offerings-list list">
-      <li class="offerings-item icon-delive">
-        <h4 class="offerings-name-list">Fasest Delivery</h4>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          varius enim in eros.
-        </p>
-      </li>
-      <li class="offerings-item icon-order">
-        <h4 class="offerings-name-list">Easy to order</h4>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          varius enim in eros.
-        </p>
-      </li>
-    </ul>
-    <div class="offerings--links">
-      <div class="links">
-        <button class="offerings__button" type="button" data-modal-open>
-          Order Now
-        </button>
-      </div>
-      <div class="links">
-        <a class="offerings__link link" href="">Read More</a>
+    <div class="offerings-main-text">
+      <ul class="offerings-list list">
+        <li class="offerings-item icon-delive">
+          <h3 class="offerings-name-list">Fasest Delivery</h3>
+          <p class="offerings-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            varius enim in eros.
+          </p>
+        </li>
+        <li class="offerings-item icon-order">
+          <h3 class="offerings-name-list">Easy to order</h3>
+          <p class="offerings-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            varius enim in eros.
+          </p>
+        </li>
+      </ul>
+      <div class="offerings--links">
+        <div class="links">
+          <button class="offerings__button" type="button" data-modal-open>Order Now</button>
+        </div>
+        <div class="links">
+          <a class="offerings__link link" href="">Read More</a>
+        </div>
       </div>
     </div>
+   </div>
   </div>
 </section>
