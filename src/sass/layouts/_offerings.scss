@@ -1,89 +1,258 @@
 .offerings-main {
-    // padding-top: 41px;
-    // padding-bottom: 60px;
-    margin: 0 auto;
-    background-position: center;
-    background-size: 100%;
-    //   background-size: contain;
-    max-width: 480px;
-    background-image: url(/src/images/bg-offer/bg-off-320-1x.png);
-    background-repeat: no-repeat;
-  
-    @include tablet {
-      max-width: 768px;
-    }
-  
-    @include desktop {
-      max-width: 1280px;
-    }
+  @include tablet {
+    margin-top: -50px;
   }
-  
-  .offerings-item::before {
-    content: '';
+}
+
+.offering-container {
+  background-position: top;
+  background-size: cover, cover;
+  max-width: 480px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-image: url(/src/images/bg-offer/bg-off-320-1x.png);
+  background-repeat: no-repeat;
+
+  @include tablet {
+    max-width: 768px;
+    padding-top: 202px;
+    padding-bottom: 100px;
+    background-image: url(/src/images/bg-offer/bg-off-tab-1x.png);
+  }
+
+  @include desktop {
+    max-width: 1280px;
+    padding-top: 290px;
+    padding-bottom: 43px;
+    display: flex;
+    background-image: url(/src/images/bg-offer/bg-off-tab-1x.png);
+  }
+}
+
+.offerings-item::before {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 48px;
+  background: #ffffff;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 8px;
+}
+
+.offerings-apples {
+  display: none;
+
+  @include tablet {
+    display: flex;
+    gap: 44px;
+    align-items: baseline;
+    margin-top: 68px;
+  }
+  @include desktop {
+    display: none;
+  }
+}
+
+.offerings-img-cards {
+  display: block;
+  @include tablet {
+    display: flex;
+    gap: 29px;
+  }
+  @include desktop {
+    margin-right: 90px;
+  }
+}
+.icon-delive::before {
+  background-image: url(/src/images/icon-rocket.svg);
+}
+
+.icon-order::before {
+  background-image: url(/src/images/icon-finger.svg);
+}
+.offerings {
+  &__button {
     display: block;
-    width: 48px;
-    height: 48px;
+    min-width: 106px;
+    height: 40px;
+    cursor: pointer;
+
+    @include fonts(500, 13px, 1.5);
+    color: currentColor;
+
     background: #ffffff;
+    border: 1px solid $accent__text__color;
+    border-radius: 30px;
+    @include animation(background-color);
+  }
+  &__button:hover,
+  &__button:focus {
+    background-color: $btn__green__color;
+    border: none;
+  }
+  &__img {
+    width: 201px;
+    height: 270px;
+    position: absolute;
+    bottom: 25px;
+    left: 30px;
+    @include tablet {
+      width: 257px;
+      height: 345px;
+      left: 33px;
+    }
+    @include desktop {
+      width: 396px;
+      height: 529px;
+      left: 52px;
+      bottom: 42px;
+    }
+  }
+  &--bg-img {
+    background-color: $white__secondary__color;
     border-radius: 50%;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-bottom: 8px;
+    width: 255px;
+    height: 255px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    @include tablet {
+      width: 325px;
+      height: 325px;
+      top: 12px;
+      left: 12px;
+    }
+    @include desktop {
+      width: 502px;
+      height: 502px;
+      top: 20px;
+      left: 20px;
+    }
   }
-  
-  .icon-delive::before {
-    background-image: url(/src/images/icon-rocket.svg);
+  &--border {
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    width: 280px;
+    height: 280px;
+    position: relative;
+    @include tablet {
+      width: 357px;
+      height: 357px;
+    }
+    @include desktop {
+      width: 550px;
+      height: 550px;
+    }
   }
-  
-  .icon-order::before {
-    background-image: url(/src/images/icon-finger.svg);
-  }
-  .offerings {
-    &__button {
+  &--img-pos {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+    @include tablet {
       display: block;
-      min-width: 106px;
-      height: 40px;
-      cursor: pointer;
-  
-      @include fonts(500, 13px, 1.5);
-      color: currentColor;
-  
-      background: #ffffff;
-      border: 1px solid $accent__text__color;
-      border-radius: 30px;
     }
-    &__img {
-      margin-bottom: 60px;
-    }
-    &__link {
-      @include fonts(400, 13px, 1.5);
-      color: $secondary__text__color;
-      display: flex;
-      &::after {
-        content: '';
-        background-image: url(/src/images/icon-read.svg);
-        width: 14px;
-        height: 14px;
-        background-repeat: no-repeat;
-        background-position: bottom;
-      }
-    }
-    &--links {
-      display: flex;
-      align-items: baseline;
-      gap: 24px;
+    @include desktop {
+      margin-bottom: 0;
     }
   }
-  .offerings-item {
-    margin-bottom: 28px;
+  &__link {
+    @include fonts(400, 13px, 1.5);
+    color: $secondary__text__color;
+    display: flex;
+    &::after {
+      content: '';
+      background-image: url(/src/images/icon-read.svg);
+      width: 14px;
+      height: 14px;
+      background-repeat: no-repeat;
+      background-position: bottom;
+      fill: currentColor;
+      @include animation(fill);
+    }
+    &::after:hover,
+    &::after:focus {
+      fill: $btn__green__color;
+    }
+
+    @include desktop {
+      display: none;
+    }
+    @include animation(color);
   }
-  .offerings-name {
-    padding-bottom: 28px;
-    @include fonts (700,28px,1.18)
+  &__link:hover,
+  &__link:focus {
+    color: $btn__green__color;
   }
-  .offerings-name-list {
-    padding-bottom: 16px;
+
+  &--links {
+    display: flex;
+    align-items: baseline;
+    gap: 24px;
   }
-  .offerings-center {
-    margin-bottom: 28px;
+}
+.offerings-item {
+  margin-bottom: 28px;
+  @include tablet {
+    width: 252px;
   }
-  
+}
+.offerings-body {
+  @include desktop {
+    display: block;
+  }
+}
+.offerings-name {
+  padding-bottom: 28px;
+  color: $secondary__text__color;
+  @include fonts(700, 28px, 1.18);
+  @include tablet {
+    @include fonts(700, 42px, 1.16);
+  }
+  @include desktop {
+    @include fonts(700, 42px, 1.19);
+  }
+}
+.offerings-text-own {
+  @include fonts(400, 16px, 1.18);
+  @include desktop {
+    @include fonts(400, 16px, 1.5);
+  }
+}
+.offerings-text {
+  color: $secondary__text__color;
+  @include fonts(400, 16px, 1.18);
+  @include tablet {
+    @include fonts(400, 14px, 1.14);
+  }
+
+  @include desktop {
+    @include fonts(400, 15px, 1.4);
+  }
+}
+.offerings-name-list {
+  padding-bottom: 16px;
+  color: $secondary__text__color;
+  @include fonts(700, 18px, 1.16);
+  @include desktop {
+    @include fonts(700, 18px, 1.38);
+  }
+}
+.offerings-center {
+  margin-bottom: 28px;
+  @include tablet {
+    width: 526px;
+    margin-bottom: 40px;
+  }
+}
+.offerings-list {
+  @include tablet {
+    display: flex;
+    gap: 116px;
+    margin-bottom: 40px;
+  }
+  @include desktop {
+    gap: 67px;
+  }
+}
