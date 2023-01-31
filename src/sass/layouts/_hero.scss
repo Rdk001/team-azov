@@ -85,20 +85,17 @@ position: absolute;
 
 .wrap-slider {
     display: none;
-    position: relative;
     margin-left: auto;
 
     @include tablet {
         display: block;
         width: 320px;
         height: 320px;
-        // margin-top: 89px;
     }
 
     @include desktop {
         height: 580px;
         width: 580px;
-        // margin-top: 14px;
     }
 }
 
@@ -130,14 +127,19 @@ position: absolute;
     content: "";
     position: absolute;
     left: -22px;
-    // background-image: url(../images/ep_arrow-up-tab.svg);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
-    border-radius: 8px;
     width: 34px;
     height: 28px;
 
+    background-image: url(../images/icon-left.svg);
+    background-repeat: no-repeat;
+    background-color:#FEFEFE;
+    background-position: center;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+
     @include desktop {
-        left: -26px;
+        left: -25px;
         width: 48px;
         height: 40px;
         // background-image: url(../images/ep_arrow-up.svg);
@@ -148,15 +150,19 @@ position: absolute;
     content: "";
     position: absolute;
     right: -15px;
-    background-image: url(../images/icon-right.svg);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
-    border-radius: 8px;
     width: 34px;
     height: 28px;
+
+    background-image: url(../images/icon-right.svg);
     background-repeat: no-repeat;
+    background-color: #FEFEFE;
+    background-position: center;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
 
     @include desktop {
-        right: -18px;
+        right: -25px;
         width: 48px;
         height: 40px;
         // background-image: url(../images/ep_arrow-down.svg);
