@@ -1,13 +1,4 @@
 .subscribe {
-    background: $white__main__color;
-    // padding-bottom: 62px;
-    // padding-top: 52px;
-
-    // @include tablet {
-    //     // padding-bottom: 100px;
-    //     // padding-top: 82px;
-    // }
-
     @include desktop {
         height: 266px;
         position: relative;
@@ -15,40 +6,25 @@
     } 
 }
 .subscribe__box {
-    background: $white__main__color;
     padding-bottom: 62px;
     padding-top: 52px;
     position: relative;
-    @include tablet {
-        padding-bottom: 100px;
-        padding-top: 82px;
-    }
+
     @include desktop {
         display: flex;
         position: absolute;
-        bottom: 46px;
         flex-direction: row-reverse;
         flex-wrap: nowrap;
         padding-top: 0;
-        padding-bottom: 64px;
-        //justify-content: baseline;
-        //padding-bottom: 64px;
-        //padding-top: 46px;
-        //flex:1;
-        
+        top: -68px;
+        padding-bottom: 64px;        
     }
 }
 .subscribe__wrap-form {
-    // @include desktop {
-    // height: 266px;
-    // width: 656px;
-    // }
-}
-.subscribe__wrap {
-    // @include desktop {
-    //     width: 608px;
-    //     height: 266px;
-    // }
+    @include desktop {
+        padding-top: 46px;
+        padding-bottom: 36px;
+    }
 }
 .subscribe__title {
     @include fonts(700, 28px, 1.20);
@@ -56,9 +32,6 @@
 
     @include tablet {
         font-size: 42px;
-    }
-    @include desktop {
-        padding-top: 46px;
     }
 }
 .subscribe__desc {
@@ -82,10 +55,8 @@
     }
     @include desktop {
         gap: 32px;
-        margin-bottom: 36px;
     }
 }
-
 .subscribe__input {
     box-sizing: border-box;
     background: $white__color;
@@ -94,9 +65,7 @@
     @include animation(outline);
     border-radius: 30px;
     padding: 12px 11px;
-    margin-bottom: 20px;
     width: 100%;
-    position: relative;
 
     &::placeholder {
         font-family: $main__font;
@@ -115,12 +84,16 @@
     &:not(:placeholder-shown):not(:focus):invalid {
         border: 0.854167px solid #FF705D;
     }
-    &:not(:placeholder-shown):not(:focus):invalid+.subscribe__error {
-        display: block;
-        position: absolute;
-        left: 4%;
-        bottom: 32%;
+
+    @include tablet {
+        width: 395px;
+        margin-bottom: 0;
     }
+}
+.subscribe__label {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
     @include tablet {
         width: 395px;
         margin-bottom: 0;
@@ -130,8 +103,13 @@
     display: none;
     @include fonts(400, 10px, 1.5);
     color: #FF705D;
-}
 
+    .subscribe__input:not(:placeholder-shown):not(:focus):invalid+& {
+        display: block;
+        position: absolute;
+        left: 0;
+    }
+}
 .subscribe__btn {
     display: block;
     @include fonts(500, 13px, 1.50);
@@ -168,17 +146,12 @@
         right: 0;
         left: 93%;
         transform: translateX(-93%);
-        //width: 281px;
-        // height: 136px;
     }
 
     @include desktop {
         position: static;
         transform: none;
-        //display: inline-block;
         width: 608px;
         height: 266px;
-        //object-fit: contain;
     }
-
 }
