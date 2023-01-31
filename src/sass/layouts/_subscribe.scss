@@ -5,6 +5,7 @@
         max-width: 1280px;
     } 
 }
+
 .subscribe__box {
     padding-bottom: 62px;
     padding-top: 52px;
@@ -20,12 +21,14 @@
         padding-bottom: 64px;        
     }
 }
+
 .subscribe__wrap-form {
     @include desktop {
         padding-top: 46px;
         padding-bottom: 36px;
     }
 }
+
 .subscribe__title {
     @include fonts(700, 28px, 1.20);
     margin-bottom: 20px;
@@ -35,6 +38,7 @@
         font-size: 42px;
     }
 }
+
 .subscribe__desc {
     @include fonts(400, 14px, 1.14);
     margin-bottom: 40px;
@@ -44,6 +48,7 @@
         margin-bottom: 24px;
     }
 }
+
 .subscribe__form {
     display: flex;
     flex-direction: column;
@@ -58,6 +63,7 @@
         gap: 32px;
     }
 }
+
 .subscribe__input {
     box-sizing: border-box;
     background: $white__color;
@@ -91,6 +97,7 @@
         margin-bottom: 0;
     }
 }
+
 .subscribe__label {
     position: relative;
     width: 100%;
@@ -100,6 +107,7 @@
         margin-bottom: 0;
     }
 }
+
 .subscribe__error {
     display: none;
     @include fonts(400, 10px, 1.5);
@@ -111,6 +119,7 @@
         left: 0;
     }
 }
+
 .subscribe__btn {
     display: block;
     @include fonts(500, 13px, 1.50);
@@ -134,6 +143,7 @@
         border: 0.854167px solid #FFE450;
     }
 }
+
 .subscribe__img {
     position: absolute;
     display: block;
