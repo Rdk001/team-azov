@@ -1,125 +1,175 @@
-
-
 .hero {
-    padding-top: 60px;
-    padding-bottom: 50px;
     background-color: $white__color;
-
-    @include desktop {
-        height: 608px;
-    }
 }
+
+.container-wrap {
+    position: relative;
+    display: flex;
+}
+
+.hero__wrap{
+    @include tablet {
+            flex-grow: 1;
+    
+        }
+    
+        @include desktop {
+            padding-top: 160px;
+        }
+    }
 
 .hero_title {
     @include fonts (700, 28px, calc(33 / 28));
-
-    margin-left: auto;
-    margin-right: auto;
     margin-bottom: 28px;
-    color: $main__text__color;
 
     @include tablet {
-        width: 537px;
-        text-align: left;
-        font-weight: 700;
-        font-size: 42px;
-        line-height: calc(50 / 42);
+        @include fonts (700, 42px, 1.2);
         margin-bottom: 44px;
-        margin-left: 0;
+        max-width: 537px;
     }
 
     @include desktop {
-        @include fonts (700, 48px, calc(58 / 48));
-        width: 502px;
+        @include fonts (700, 48px, 1.2);
+        max-width: 502px;
         margin-bottom: 28px;
-        margin-top: 100px;
     }
 }
 
 .hero__text {
     @include fonts (null, 14px, calc(21 / 14));
-
     margin-bottom: 28px;
-    color: $main__text__color;
-    margin-left: auto;
-    margin-right: auto;
+
 
     @include tablet {
         @include fonts (null, 16px, calc(24 / 16));
         text-align: left;
-        width: 336px;
-        height: 120px;
+        max-width: 336px;
         margin-bottom: 40px;
-        margin-left: 0;
-        margin-right: 32px;
     }
 
     @include desktop {
-        @include fonts (null, 16px, calc(24 / 16));
-        width: 502px;
-        height: 69px;
+        max-width: 502px;
         margin-bottom: 40px;
     }
 
 }
 
 .hero__button {
-    @include fonts (500, 13px, calc(13 / 20));
-    color: $main__text__color;
-
     min-width: 98px;
     height: 32px;
-    cursor: pointer;
-    text-align: center;
-    background: $btn__green__color;
+    
+    @include fonts (500, 13px, calc(20 / 13));
+    font-family: inherit;
+
+    color: $main__text__color;
     border: none;
     border-radius: 30px;
-    margin-left: auto;
-    margin-right: auto;
+    background: $btn__green__color;
 
+    cursor: pointer;
 }
 
-.hero__photo {
+//------------------ slider -------------------------
+
+.slider-wrapper{
+position: absolute;
+    top: 89px;
+    right: 32px;
+
+    @include desktop {
+        top: 14px;
+        right: 16px;
+}
+}
+
+
+.wrap-slider {
     display: none;
+    position: relative;
+    margin-left: auto;
 
     @include tablet {
         display: block;
         width: 320px;
         height: 320px;
-        position: absolute;
-        left: 53%;
-        top: 19%;
-        z-index: 1;
+        // margin-top: 89px;
     }
 
     @include desktop {
-        width: 608px;
         height: 580px;
-        position: absolute;
-        left: 55%;
-        top: -10%;
-        z-index: 1;
+        width: 580px;
+        // margin-top: 14px;
     }
 }
 
-.hero__wrap {
-    @include tablet {
-        display: flex;
-        position: relative;
-    }
-}
+.wrap-picture {
+    border-radius: 50%;
 
-.hero__image {
     @include tablet {
-        width: 100%;
-        border: 14px solid $yellow__bg__color;
-        border-radius: 50%;
+        border: 14px solid #FFE550;
     }
 
     @include desktop {
-        width: 100%;
-        height: 100%;
-        border: 26px solid $yellow__bg__color;
-        border-radius: 50%;
+        border: 26px solid #FFE550;
     }
+}
+
+.slider-img {
+    @include tablet {
+        width: 292px;
+        height: 292px;
+    }
+
+    @include desktop {
+        width: 528px;
+        height: 528px;
+    }
+}
+
+.swiper-button-prev::before {
+    content: "";
+    position: absolute;
+    left: -22px;
+    // background-image: url(../images/ep_arrow-up-tab.svg);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    width: 34px;
+    height: 28px;
+
+    @include desktop {
+        left: -26px;
+        width: 48px;
+        height: 40px;
+        // background-image: url(../images/ep_arrow-up.svg);
+    }
+}
+
+.swiper-button-next::before {
+    content: "";
+    position: absolute;
+    right: -15px;
+    background-image: url(../images/icon-right.svg);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    width: 34px;
+    height: 28px;
+    background-repeat: no-repeat;
+
+    @include desktop {
+        right: -18px;
+        width: 48px;
+        height: 40px;
+        // background-image: url(../images/ep_arrow-down.svg);
+    }
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    width: 0;
 }
