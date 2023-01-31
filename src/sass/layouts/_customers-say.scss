@@ -1,0 +1,146 @@
+.customers-say {
+    position: relative;
+
+    &__container {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @include mobile_max {
+            background-image: url(../images/bg-custom/bg-cust-320-1x-min.png);
+        }
+
+        @include mobile {
+            background-image: url(../images/bg-custom/bg-cust-480-1x-min.png);
+            background-size: 100% 100%;
+            padding-bottom: 85px;
+        }
+
+        @include tablet {
+            padding: 60px 32px 120px 32px;
+            background-image: url(../images/bg-custom/bg-cust-tab-1x-min.png);
+            background-position: bottom;
+        }
+
+        @include desktop {
+            padding: 100px 123px 200px 16px;
+            background-image: url(../images/bg-custom/bg-cust-desk-1x-min.png);
+        }
+    }
+
+    &__title {
+        margin-bottom: 20px;
+        color: $main__text__color;
+        font-style: normal;
+        @include fonts(700, 28px, calc(33 / 28));
+
+        @include tablet {
+            @include fonts(null, 42px, calc(49 / 42));
+        }
+    }
+
+    &__text {
+        margin-bottom: 32px;
+        color: $main__text__color;
+        font-style: normal;
+        @include fonts(400, 14px, calc(16 / 14));
+
+        @include tablet {
+            @include fonts(null, 16px, calc(19 / 16));
+        }
+    }
+
+    &-list {
+        @include tablet {
+            display: flex;
+            gap: 32px;
+        }
+
+        @include desktop {
+            gap: 139px;
+        }
+
+        &__item {
+            padding: 8px;
+            background-color: $white__color;
+            border-top-right-radius: 23px;
+            border-bottom-left-radius: 23px;
+            border-bottom-right-radius: 23px;
+
+            @include tablet {
+                width: calc((100% - 32px)/2);
+                padding: 12px;
+            }
+
+            @include desktop {
+                padding: 14px;
+            }
+        }
+
+        &__item:not(:last-child) {
+            margin-bottom: 24px;
+
+            @include tablet {
+                margin-bottom: 0px;
+            }
+        }
+
+        &__icon {
+            margin-bottom: 28px;
+
+        }
+
+        &__text {
+            margin-bottom: 40px;
+            color: $main__text__color;
+            font-style: normal;
+            @include fonts(700, 16px, calc(19 / 16));
+
+            @include tablet {
+                @include fonts(null, 18px, calc(21 / 18));
+            }
+        }
+
+        .avatar {
+            display: flex;
+            align-items: center;
+            padding-top: 2px;
+            padding-bottom: 2px;
+
+            &__icon {
+                margin-right: 16px;
+            }
+
+            &__content {
+                position: relative;
+
+                &::before {
+                    content: " ";
+                    position: absolute;
+                    width: 1px;
+                    height: 100%;
+                    top: 0;
+                    right: -16px;
+
+                    background: $accent__text__color;
+                    border-radius: 1px;
+
+                }
+            }
+
+            &__title {
+                margin-bottom: 2px;
+                color: $main__text__color;
+                font-style: normal;
+                @include fonts(500, 14px, calc(21 / 14));
+            }
+
+            &__text {
+                color: $main__text__color;
+                font-style: normal;
+                @include fonts(400, 14px, calc(21 / 14));
+            }
+        }
+    }
+}
