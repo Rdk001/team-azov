@@ -1,21 +1,52 @@
 .subscribe {
-    background: $white__main__color;
+    @include desktop {
+        height: 266px;
+        position: relative;
+        max-width: 1280px;
+    } 
+}
+
+.subscribe__box {
     padding-bottom: 62px;
     padding-top: 52px;
     position: relative;
 
-  
+    @include desktop {
+        display: flex;
+        position: absolute;
+        flex-direction: row-reverse;
+        flex-wrap: nowrap;
+        padding-top: 0;
+        top: -68px;
+        padding-bottom: 64px;        
+    }
 }
+
+.subscribe__wrap-form {
+    @include desktop {
+        padding-top: 46px;
+        padding-bottom: 36px;
+    }
+}
+
 .subscribe__title {
     @include fonts(700, 28px, 1.20);
     margin-bottom: 20px;
+    padding-top: 20px;
 
+    @include tablet {
+        font-size: 42px;
+    }
 }
 
 .subscribe__desc {
     @include fonts(400, 14px, 1.14);
     margin-bottom: 40px;
 
+    @include tablet {
+        @include fonts(null, 16px, 1.50);
+        margin-bottom: 24px;
+    }
 }
 
 .subscribe__form {
@@ -23,6 +54,14 @@
     flex-direction: column;
     align-items: flex-end;
 
+    @include tablet {
+        flex-direction: row;
+        align-items: baseline;
+        gap: 22px;
+    }
+    @include desktop {
+        gap: 32px;
+    }
 }
 
 .subscribe__input {
@@ -33,9 +72,7 @@
     @include animation(outline);
     border-radius: 30px;
     padding: 12px 11px;
-    margin-bottom: 20px;
     width: 100%;
-    position: relative;
 
     &::placeholder {
         font-family: $main__font;
@@ -54,17 +91,33 @@
     &:not(:placeholder-shown):not(:focus):invalid {
         border: 0.854167px solid #FF705D;
     }
-    &:not(:placeholder-shown):not(:focus):invalid+.subscribe__error {
-            display: block;
-            position: absolute;
-            left: 4%;
-            bottom: 32%;
-        }
+
+    @include tablet {
+        width: 395px;
+        margin-bottom: 0;
+    }
 }
+
+.subscribe__label {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+    @include tablet {
+        width: 395px;
+        margin-bottom: 0;
+    }
+}
+
 .subscribe__error {
     display: none;
     @include fonts(400, 10px, 1.5);
     color: #FF705D;
+
+    .subscribe__input:not(:placeholder-shown):not(:focus):invalid+& {
+        display: block;
+        position: absolute;
+        left: 0;
+    }
 }
 
 .subscribe__btn {
@@ -93,9 +146,23 @@
 
 .subscribe__img {
     position: absolute;
+    display: block;
     top: -43px;
     left: 50%;
     transform: translateX(-50%);
     width: 280px;
 
+    @include tablet {
+        top: -74px;
+        right: 0;
+        left: 93%;
+        transform: translateX(-93%);
+    }
+
+    @include desktop {
+        position: static;
+        transform: none;
+        width: 608px;
+        height: 266px;
+    }
 }
