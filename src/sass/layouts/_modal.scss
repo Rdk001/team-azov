@@ -1,0 +1,150 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+  
+    width: 100%;
+    height: 100%;
+    background-color:rgba(94, 99, 99, 0.7);
+    opacity: 1;
+    @include animation(visibility);
+    @include animation(opacity);
+    z-index: 10;
+  }
+  .modal {
+    width:320px;
+    height: 449px;
+    padding:32px 20px;
+    @include tablet{
+      width:458px;
+      padding:32px;
+    }
+    background-color:$yellow__bg__color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+    border-radius: 30px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+  
+    transform: translate(-50%, -50%) scaleX(1);
+    @include animation(translate);
+    .backdrop.is-hidden & {
+      transform: translate(-50%, -50%) scaleX(0);
+    }
+  }
+  .modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color:$white__color;
+    box-shadow:0px 4px 4px rgba(0, 0, 0, 0.06);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include animation(box-shadow);
+    @include animation(border-color);
+    &:hover,
+    &:focus{
+      box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.4);
+      border-color:$accent__text__color;
+    }
+    @include animation(fill);
+    &:hover .button-icon{
+      fill:$accent__text__color;
+    }
+  }
+  .modal-close::before{
+    content:'';
+    background-image:url(../images/icon-cross.svg);
+    position: absolute;
+    fill:$main__text__color;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .button-icon {
+    fill:$main__text__color;
+    @include animation(fill);
+  }
+  .modal-title{
+  @include fonts(700, 24px, calc(29 / 24));
+
+  color:$main__text__color;
+  text-align: center;
+  margin-bottom: 20px;
+  }
+  .modal-field{
+   margin-bottom:10px;
+  }
+  .input-text{
+  @include fonts(500, 16px, calc(22 / 16));
+
+  color:$main__text__color;
+
+  display: flex;
+  margin-bottom: 16px;
+  }
+  .input-wrap{
+    position:relative;
+  }
+  .modal-input{
+    width: 100%;
+    height: 48px;
+    border: 1px solid rgba(18, 18, 18, 0.12);
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 30px;
+    padding-left:42px;
+    outline: transparent;
+    background-color:$white__color;
+    @include animation(border-color);
+    &:focus{
+      border-color:$accent__text__color;
+    }
+ 
+  }
+  .modal-input::placeholder{
+    @include fonts(400, 16px, calc(20 / 16));
+    color: #C4C4C4;
+  }
+
+ .modal-input:not(:placeholder-shown):not(:focus):invalid{
+    border: 1px solid 1px solid #FF705D;
+    background-color:#FF705D;
+  }
+
+  .modal-button{
+  @include fonts(700, 16px, calc(30 / 16));
+  position: relative;
+  background-color:$white__color;
+  border:2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  
+  display: flex;
+  min-width: 106px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 10px 38px;
+  margin-top:32px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom:0;
+  @include animation(box-shadow);
+  @include animation(border-color);
+  &:hover,
+  &:focus{
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.4);
+    border-color:$accent__text__color;
+  }
+  }
+  .is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
