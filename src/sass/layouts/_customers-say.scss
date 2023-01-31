@@ -5,7 +5,7 @@
         padding-top: 60px;
         padding-bottom: 60px;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: 100% 100%;
 
         @include mobile_max {
             background-image: url(../images/bg-custom/bg-cust-320-1x-min.png);
@@ -116,7 +116,7 @@
                 position: relative;
 
                 &::before {
-                    content: " ";
+                    content: "";
                     position: absolute;
                     width: 1px;
                     height: 100%;

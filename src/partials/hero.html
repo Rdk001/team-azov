@@ -1,28 +1,40 @@
-<section class="hero">
-    <div class="container">
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero__wrap">
+      <div class="hero__wrapper">
+        <h1 class="hero_title">Enjoy Your Favorite Food From Anywhere</h1>
+        <p class="hero__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+          varius enim in eros elementum tristique. Duis cursus, mi quis viverra
+          ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+        </p>
+        <button type="button" class="hero__button" data-modal-open>
+          Order Now
+        </button>
+      </div>
+      <div class="hero__photo">
+        <picture>
+          <source
+            srcset="
+              ./images/falafel-desk-1x.png 1x,
+              ./images/falafel-desk-2x.png
+            "
+            media="(min-width: 1280px)"
+          />
 
-        <div class="hero__wrap">
-            <div class="hero__wrapper">
-                <h1 class="hero_title">Enjoy Your Favorite Food From Anywhere</h1>
-                <p class="hero__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim
-                    in eros elementum
-                    tristique. Duis
-                    cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
-                <button type="button" class="hero__button">Order Now</button>
-            </div>
-            <div class="hero__photo">
-                <picture>
-                    <source srcset="./images/falafel-desk-1x.png 1x, ./images/falafel-desk-2x.png"
-                        media="(min-width: 1280px)" />
+          <source
+            srcset="./images/falafel-tab-1x.png 1x, ./images/falafel-tab-2x.png"
+            media="(min-width: 768px)"
+          />
 
-                    <source srcset="./images/falafel-tab-1x.png 1x, ./images/falafel-tab-2x.png"
-                        media="(min-width: 768px)" />
-
-                    <img class="hero__image" src="./images/falafel-desk-1x.png" width="528" alt="Falafel">
-                </picture>
-            </div>
-        </div>
-
+          <img
+            class="hero__image"
+            src="./images/falafel-desk-1x.png"
+            width="528"
+            alt="Falafel"
+          />
+        </picture>
+      </div>
     </div>
+  </div>
 </section>
-
