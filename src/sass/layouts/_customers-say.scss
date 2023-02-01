@@ -1,4 +1,5 @@
 .customers-say {
+    max-width: 480px;
     padding-top: 60px;
     padding-bottom: 60px;
     background-repeat: no-repeat;
@@ -16,6 +17,7 @@
     }
 
     @include tablet {
+        max-width: 768px;
         padding: 60px 32px 120px 32px;
         background-image: url(../images/bg-custom/bg-cust-tab-1x-min.png);
         background-position: bottom;

@@ -1,5 +1,15 @@
 .hero {
     background-color: $white__color;
+    max-width: 480px;
+    
+    margin: 0 auto;
+    @include tablet{
+    max-width: 768px;
+    }
+
+    @include desktop{
+    max-width: 1600px;
+    }
 }
 
 .container-wrap {
