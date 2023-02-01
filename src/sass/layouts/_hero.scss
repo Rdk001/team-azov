@@ -12,11 +12,16 @@
         flex-grow: 1;
 
     }
+    
+    @include tablet_max{
+    padding-top: 60px;
+    }
 
     @include desktop {
         padding-top: 160px;
     }
 }
+
 
 .hero_title {
     @include fonts (700, 28px, calc(33 / 28));
