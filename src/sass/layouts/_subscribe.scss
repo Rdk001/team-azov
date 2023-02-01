@@ -1,4 +1,10 @@
 .subscribe {
+    margin: 0 auto;
+    max-width: 480px;
+    @include tablet{
+    max-width: 768px;
+    }
+    
     @include desktop {
         height: 266px;
         position: relative;

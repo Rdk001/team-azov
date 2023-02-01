@@ -1,15 +1,11 @@
 .offerings-main {
-  @include tablet {
-    margin-top: -50px;
-  }
-}
-
-.offering-container {
-  background-position: top;
-  background-size: cover, cover;
   max-width: 480px;
+  margin: 0 auto;
   padding-top: 60px;
   padding-bottom: 60px;
+
+  background-position: top;
+  background-size: cover;
   background-image: url(/src/images/bg-offer/bg-off-320-1x.png);
   background-repeat: no-repeat;
 
@@ -18,15 +14,22 @@
     padding-top: 202px;
     padding-bottom: 100px;
     background-image: url(/src/images/bg-offer/bg-off-tab-1x.png);
+    margin-top: -50px;
   }
 
   @include desktop {
     max-width: 1280px;
     padding-top: 290px;
     padding-bottom: 43px;
-    display: flex;
     background-image: url(/src/images/bg-offer/bg-off-tab-1x.png);
   }
+}
+
+.offering-container {
+  @include desktop{
+  display: flex;
+  }
+ 
 }
 
 .offerings-item::before {
@@ -82,7 +85,7 @@
     @include fonts(500, 13px, 1.5);
     color: currentColor;
 
-    background: #ffffff;
+    background-color: #ffffff;
     border: 1px solid $accent__text__color;
     border-radius: 30px;
     @include animation(background-color);
