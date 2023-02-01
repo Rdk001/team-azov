@@ -10,11 +10,7 @@
 .hero__wrap {
     @include tablet {
         flex-grow: 1;
-
-    }
-    
-    @include tablet_max{
-    padding-top: 60px;
+        padding-top: 60px;
     }
 
     @include desktop {
@@ -165,7 +161,7 @@
         width: 48px;
         height: 40px;
 
-        &:hover {
+        &:hover,&:focus {
             color: $accent__text__color;
         }
     }
