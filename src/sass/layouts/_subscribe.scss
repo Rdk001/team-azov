@@ -1,6 +1,8 @@
 .subscribe {
     max-width: 480px;
     margin: 0 auto;
+    padding-bottom: 62px;
+    padding-top: 52px;
 
     @include tablet{
     max-width: 768px;
@@ -10,12 +12,12 @@
         height: 266px;
         position: relative;
         max-width: 1280px;
+        padding-bottom: 64px;
+        padding-top: 0;
     } 
 }
 
 .subscribe__box {
-    padding-bottom: 62px;
-    padding-top: 52px;
     position: relative;
 
     @include desktop {
@@ -23,9 +25,7 @@
         position: absolute;
         flex-direction: row-reverse;
         flex-wrap: nowrap;
-        padding-top: 0;
-        top: -68px;
-        padding-bottom: 64px;        
+        top: -68px;    
     }
 }
 
@@ -39,10 +39,10 @@
 .subscribe__title {
     @include fonts(700, 28px, 1.20);
     margin-bottom: 20px;
-    margin-top: 20px;
 
     @include tablet {
         font-size: 42px;
+        margin-top: 20px;
     }
 }
 
@@ -154,13 +154,13 @@
 .subscribe__img {
     position: absolute;
     display: block;
-    top: -43px;
+    top: -95px;
     left: 50%;
     transform: translateX(-50%);
     width: 280px;
 
     @include tablet {
-        top: -74px;
+        top: -143px;
         right: 0;
         left: 93%;
         transform: translateX(-93%);
