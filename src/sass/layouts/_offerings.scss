@@ -195,6 +195,7 @@
 .offerings-item {
   margin-bottom: 28px;
   @include tablet {
+    margin-bottom: 0;
     width: 252px;
   }
 }
@@ -209,26 +210,30 @@
   @include fonts(700, 28px, 1.18);
   @include tablet {
     @include fonts(700, 42px, 1.16);
+    padding-bottom: 20px;
   }
   @include desktop {
     @include fonts(700, 42px, 1.19);
   }
 }
 .offerings-text-own {
-  @include fonts(400, 16px, 1.18);
+  @include fonts(400, 14px, 1.18);
+  @include tablet {
+    @include fonts(400, 16px, 1.18);
+  }
   @include desktop {
     @include fonts(400, 16px, 1.5);
   }
 }
 .offerings-text {
   color: $secondary__text__color;
-  @include fonts(400, 16px, 1.18);
+  @include fonts(400, 14px, 1.18);
   @include tablet {
     @include fonts(400, 14px, 1.14);
   }
 
   @include desktop {
-    @include fonts(400, 15px, 1.4);
+    @include fonts(400, 14px, 1.4);
   }
 }
 .offerings-name-list {
@@ -253,6 +258,7 @@
     margin-bottom: 40px;
   }
   @include desktop {
+    margin-bottom: 32px;
     gap: 67px;
   }
 }
