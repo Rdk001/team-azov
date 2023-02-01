@@ -1,37 +1,37 @@
 .customers-say {
-    margin: 0 auto;
-    padding-top: 60px;
-    padding-bottom: 60px;
-    max-width: 480px;
+  margin: 0 auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  // max-width: 480px;
 
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  @include mobile_max {
+    background-image: url(../images/bg-custom/bg-cust-320-1x-min.png);
+  }
+
+  @include mobile {
+    background-image: url(../images/bg-custom/bg-cust-480-1x-min.png);
     background-size: 100% 100%;
-
-    @include mobile_max {
-      background-image: url(../images/bg-custom/bg-cust-320-1x-min.png);
-    }
-    
-    @include mobile {
-      background-image: url(../images/bg-custom/bg-cust-480-1x-min.png);
-      background-size: 100% 100%;
-      padding-bottom: 85px;
-    }
-    @include tablet {
-        max-width: 768px;
-        padding-bottom: 120px;
-      background-image: url(../images/bg-custom/bg-cust-tab-1x-min.png);
-      background-position: bottom;
-    }
-    @include desktop {
-        max-width: 1280px;
-        padding-top: 100px;
-        padding-bottom: 200px;
-        background-image: url(../images/bg-custom/bg-cust-desk-1x-min.png);
-    }
+    padding-bottom: 85px;
+  }
+  @include tablet {
+    // max-width: 768px;
+    padding-bottom: 120px;
+    background-image: url(../images/bg-custom/bg-cust-tab-1x-min.png);
+    background-position: bottom;
+  }
+  @include desktop {
+    max-width: 1600px;
+    padding-top: 100px;
+    padding-bottom: 200px;
+    background-image: url(../images/bg-custom/bg-cust-desk-1x-min.png);
+  }
 
   &__container {
-    @include desktop{
-        padding-right: 123px;
+    @include desktop {
+      padding-right: 123px;
     }
   }
   &__title {

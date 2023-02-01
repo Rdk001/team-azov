@@ -1,5 +1,5 @@
 .offerings-main {
-  max-width: 480px;
+  // max-width: 480px;
   margin: 0 auto;
   padding-top: 60px;
   padding-bottom: 60px;
@@ -10,7 +10,7 @@
   background-repeat: no-repeat;
 
   @include tablet {
-    max-width: 768px;
+    // max-width: 768px;
     padding-top: 202px;
     padding-bottom: 100px;
     background-image: url(/src/images/bg-offer/bg-off-tab-1x.png);
@@ -18,7 +18,7 @@
   }
 
   @include desktop {
-    max-width: 1280px;
+    max-width: 1600px;
     padding-top: 290px;
     padding-bottom: 43px;
     background-image: url(/src/images/bg-offer/bg-off-tab-1x.png);
@@ -26,10 +26,9 @@
 }
 
 .offering-container {
-  @include desktop{
-  display: flex;
+  @include desktop {
+    display: flex;
   }
- 
 }
 
 .offerings-item::before {
