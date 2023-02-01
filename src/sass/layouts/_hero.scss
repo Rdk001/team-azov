@@ -1,14 +1,22 @@
 .hero {
-    background-color: $white__color;
     max-width: 480px;
-    
     margin: 0 auto;
+    padding-top: 60px;
+
+    background-color: $white__color;
+    
+    @include tablet_max{
+        padding-bottom: 50px;
+    }
+
+
     @include tablet{
     max-width: 768px;
     }
 
     @include desktop{
     max-width: 1280px;
+    padding-top: 14px;
     }
 }
 
@@ -18,19 +26,15 @@
 }
 
 .hero__wrap {
-    padding-top: 60px;
-   
-    @include tablet_max{
-    padding-bottom: 50px;
-    }
-   
     @include tablet {
         flex-grow: 1;
     }
+}
 
-    @include desktop {
-        padding-top: 160px;
-    }
+.hero__wrapper{
+    @include desktop{
+        padding-top: 145px;
+        }
 }
 
 
@@ -101,7 +105,7 @@
     right: 32px;
 
     @include desktop {
-        top: 14px;
+        top: 0;
         right: 16px;
     }
 }
