@@ -63,15 +63,21 @@
             font-style: normal;
     
             @include fonts(400, 14px, 16px);
-            color: $main__text__color;
+            color: $secondary__text__color;
     
             @include animation(color);
-    
-    
             &:hover,
             &:focus{
                 color: $btn__green__color;
             }
+
+            @include desktop {
+               
+                @include fonts(400, 14px, 16px);
+                color: $main__text__color;
+              
+              }
+          
     
         }
   
@@ -153,6 +159,11 @@
         right: 25px;
         top: 37px;
         overflow: hidden;
+        z-index: 5;
+
+        @include tablet{
+          display: none;
+         }
         
   
         
