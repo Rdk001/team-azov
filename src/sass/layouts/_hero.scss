@@ -7,16 +7,21 @@
     display: flex;
 }
 
-.hero__wrap{
+.hero__wrap {
     @include tablet {
-            flex-grow: 1;
-    
-        }
-    
-        @include desktop {
-            padding-top: 160px;
-        }
+        flex-grow: 1;
+
     }
+    
+    @include tablet_max{
+    padding-top: 60px;
+    }
+
+    @include desktop {
+        padding-top: 160px;
+    }
+}
+
 
 .hero_title {
     @include fonts (700, 28px, calc(33 / 28));
@@ -57,29 +62,39 @@
 .hero__button {
     min-width: 98px;
     height: 32px;
-    
+
     @include fonts (500, 13px, calc(20 / 13));
     font-family: inherit;
 
     color: $main__text__color;
     border: none;
     border-radius: 30px;
-    background: $btn__green__color;
+    background-color: $btn__green__color;
 
     cursor: pointer;
+
+    @include animation(background-color);
+
+    @include desktop {
+
+        &:hover,
+        &:focus {
+            background-color: $yellow__bg__color;
+        }
+    }
 }
 
 //------------------ slider -------------------------
 
-.slider-wrapper{
-position: absolute;
+.slider-wrapper {
+    position: absolute;
     top: 89px;
     right: 32px;
 
     @include desktop {
         top: 14px;
         right: 16px;
-}
+    }
 }
 
 
@@ -123,59 +138,44 @@ position: absolute;
     }
 }
 
-.swiper-button-prev::before {
-    content: "";
-    position: absolute;
-    left: -22px;
-    width: 34px;
-    height: 28px;
-
-    background-image: url(../images/icon-left.svg);
-    background-repeat: no-repeat;
-    background-color:#FEFEFE;
-    background-position: center;
-
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
-    border-radius: 8px;
-
-    @include desktop {
-        left: -25px;
-        width: 48px;
-        height: 40px;
-        // background-image: url(../images/ep_arrow-up.svg);
-    }
-}
-
-.swiper-button-next::before {
-    content: "";
-    position: absolute;
-    right: -15px;
-    width: 34px;
-    height: 28px;
-
-    background-image: url(../images/icon-right.svg);
-    background-repeat: no-repeat;
-    background-color: #FEFEFE;
-    background-position: center;
-
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
-    border-radius: 8px;
-
-    @include desktop {
-        right: -25px;
-        width: 48px;
-        height: 40px;
-        // background-image: url(../images/ep_arrow-down.svg);
-    }
-}
-
 .swiper-button-prev:after,
 .swiper-button-next:after {
-    opacity: 0;
-    visibility: hidden;
+    font-weight: 700;
+    font-size: 20px;
+
+    @include desktop {
+        font-size: 29px;
+    }
 }
 
 .swiper-button-prev,
 .swiper-button-next {
-    width: 0;
+    position: absolute;
+    width: 34px;
+    height: 28px;
+    color: $main__text__color;
+    background-position: center;
+
+    background-color: #FEFEFE;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    @include animation(color);
+
+    @include desktop {
+        width: 48px;
+        height: 40px;
+
+        &:hover {
+            color: $accent__text__color;
+        }
+    }
+
+    &-right {
+        right: -12px;
+    }
+
+    &-left {
+        left: -12px;
+    }
+
 }
