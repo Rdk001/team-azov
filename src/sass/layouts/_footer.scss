@@ -133,7 +133,7 @@ row-gap: 20px;
     @include animation(transform);
     }
 
-    &:hover::after{
+    &:hover::after,&:focus::after{
     transform: scaleX(1);
     }
 }
