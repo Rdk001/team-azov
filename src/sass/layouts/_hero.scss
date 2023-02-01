@@ -8,9 +8,14 @@
 }
 
 .hero__wrap {
+    padding-top: 60px;
+   
+    @include tablet_max{
+    padding-bottom: 50px;
+    }
+   
     @include tablet {
         flex-grow: 1;
-        padding-top: 60px;
     }
 
     @include desktop {
@@ -71,13 +76,11 @@
 
     @include animation(background-color);
 
-    @include desktop {
-
         &:hover,
         &:focus {
             background-color: $yellow__bg__color;
         }
-    }
+
 }
 
 //------------------ slider -------------------------
@@ -161,9 +164,10 @@
         width: 48px;
         height: 40px;
 
-        &:hover,&:focus {
-            color: $accent__text__color;
-        }
+    }
+    
+    &:hover,&:focus {
+        color: $accent__text__color;
     }
 
     &-right {

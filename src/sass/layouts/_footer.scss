@@ -105,14 +105,38 @@ flex-grow: 1;
 row-gap: 20px;
 
 &__link{
+    padding-top: 16px;
+    padding-bottom: 16px;
+
     @include fonts(400,14px,1.14);
     color: $secondary__text__color;
+
     text-decoration: none;
+    @include animation(color);
 
     @include desktop{
     color:$main__text__color;
     }
+
+    &:hover,&:focus{
+    color: $accent__text__color;
     }
+
+    &::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color:$accent__text__color;
+    transform-origin: left;
+    transform: scaleX(0);
+    @include animation(transform);
+    }
+
+    &:hover::after,&:focus::after{
+    transform: scaleX(1);
+    }
+}
 
 
 @include tablet{
